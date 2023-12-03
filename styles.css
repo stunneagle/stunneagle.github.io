@@ -7,6 +7,8 @@
     --text-color2: rgb(186, 203, 214);
     --nav-color2: rgb(186, 203, 214);
     --head-foot2: rgb(21, 79, 123);
+    --background-image1: url(personalproj_image/image2.jpeg);
+    --background-image2: url(personalproj_image/image3.jpeg);
 }
 
 .light-theme{
@@ -14,12 +16,14 @@
     --text-color: var(--text-color1);
     --nav-color: var(--nav-color1);
     --head-foot: var(--head-foot1);
+    --background-image: var(--background-image1);
 }
 .dark-theme{
     --background-color: var(--bg-color2);
     --text-color: var(--text-color2);
     --nav-color: var(--nav-color2);
     --head-foot: var(--head-foot2);
+    --background-image: var(--background-image2);
 }
 html,body{
     margin:0;
@@ -42,6 +46,30 @@ section{
     scroll-margin-top: 70px;
 }
 
+#welcome-section{
+    background: var(--background-image);
+    height: 100vh;
+}
+#typing-text{
+    
+    white-space: pre-line;
+    text-align: left;
+    transition: background-color 0.5s ease;
+}
+#typing-text::after{
+    content: '|';
+    animation: blink 0.7s infinite;
+    display: inline-block;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
 header{
     width: 100%;
     height: 70px;
