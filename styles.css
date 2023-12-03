@@ -47,14 +47,15 @@ section{
 }
 
 #welcome-section{
-    background: var(--background-image);
+    background-image: var(--background-image);
     height: 100vh;
 }
 #typing-text{
-    
+    background-color: var(--background-color);
     white-space: pre-line;
     text-align: left;
     transition: background-color 0.5s ease;
+    opacity: 0.8;
 }
 #typing-text::after{
     content: '|';
@@ -225,11 +226,9 @@ img{
 }
   
 .social{
-    
-    display: flex;
-    justify-content: space-evenly;
+    text-align: center;
 }
-  
+
 .social a{
     text-decoration:none;
     color: var(--text-color);
@@ -278,6 +277,9 @@ footer{
     #navbar a{
         margin:5px 0;
     }
+    .social-text{
+        display: none;
+    }
    
 }
 
@@ -319,5 +321,8 @@ footer{
     .project-tile:focus span{
         color: var(--background-color);
         font-size: 25px;
+    }
+    .social-text{
+        display: none;
     }
 }
