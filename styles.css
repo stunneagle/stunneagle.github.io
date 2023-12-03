@@ -1,0 +1,299 @@
+:root{
+    --bg-color1: rgb(186, 203, 214);
+    --text-color1: rgb(23, 43, 44);
+    --nav-color1: rgb(21, 79, 123);
+    --head-foot1: rgb(186, 203, 214);
+    --bg-color2: rgb(23, 43, 44);
+    --text-color2: rgb(186, 203, 214);
+    --nav-color2: rgb(186, 203, 214);
+    --head-foot2: rgb(21, 79, 123);
+}
+
+.light-theme{
+    --background-color: var(--bg-color1);
+    --text-color: var(--text-color1);
+    --nav-color: var(--nav-color1);
+    --head-foot: var(--head-foot1);
+}
+.dark-theme{
+    --background-color: var(--bg-color2);
+    --text-color: var(--text-color2);
+    --nav-color: var(--nav-color2);
+    --head-foot: var(--head-foot2);
+}
+html,body{
+    margin:0;
+    padding: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    scroll-behavior: smooth;
+    
+}
+  
+  
+main{
+   margin-top: 70px;
+   background-color:var(--background-color);
+   padding: 8px;
+   color:var(--text-color);
+  
+}
+  
+section{
+    scroll-margin-top: 70px;
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    opacity: 0.9;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color:var(--nav-color);
+    color:var(--background-color);
+    z-index: 10;
+    display: inline;
+}
+
+.select-theme{
+    position: relative;
+    left:5px;
+    top:20px;
+    display: flex;
+}
+
+.theme{
+    
+    width: 46px;
+    height: 24px;
+    background-color: transparent;
+    border-radius: 50px;
+    border: 1px solid var(--background-color);
+   
+}
+.theme-button{
+    
+    margin: 1px;
+    width: 48%;
+    height: 94%;
+    background-color: var(--background-color);
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+}
+.switched {
+    transform: translateX(100%);
+}
+#navbar{
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-transform: uppercase;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+#navbar a{
+    text-decoration: none;
+    color:var(--background-color);
+    cursor:pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 9px;
+}
+
+#navbar a:hover{
+    background-color: var(--background-color);
+    color:var(--text-color);
+    border-radius:10px;  
+}
+  
+  
+h1,h2,h3{
+    text-align:center;
+    margin: 0;
+    padding:0;
+}
+
+.title-caption{
+    text-align:center;
+}
+  
+.welcome-text{
+    text-indent: 50px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+}
+  
+.projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+  
+.project-tile{
+    margin: 8px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 1px;
+    overflow: hidden;
+    position: relative;
+}
+  
+.project-tile:hover{
+    background-color:var(--nav-color) ;
+    text-decoration: none;
+    color: var(--text-color);
+}
+  
+.project-tile span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: #fff; /* Text color */
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 1; /* Initially invisible */
+    transition: font-size 0.3s ease; /* Add a smooth transition for visibility */
+    z-index: 1;
+}
+
+  
+.project-tile:hover span{
+    color: var(--background-color);
+    font-size: 25px;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.freecampproject li{
+    margin-top: 7px;
+    color: black;
+}
+  
+.freecampproject a{
+    color: black;
+    padding: 3px;
+    border: 1px solid black;
+    border-radius: 8px; 
+}
+  
+.freecampproject a:hover{
+    color: var(--text-color);
+    background-color: var(--nav-color);
+    text-decoration: none;
+}
+  
+.social{
+    display: flex;
+    justify-content: space-evenly;
+}
+  
+.social a{
+    text-decoration:none;
+    color: var(--text-color);
+    font-size: 18px;
+    margin-bottom:20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding:5px;
+}
+  
+.social a:hover{
+    border: none;
+    background-color: var(--nav-color);
+    color: var(--background-color);
+    text-decoration: none;
+}
+  
+footer{
+    background-color: var(--nav-color);
+    color:var(--background-color);
+    text-align:center;
+    font-weight: bold;
+    height: 40px;
+    padding: 5px;
+}
+
+@media only screen and (max-width:800px){
+    main{
+      border: 9px solid white;
+      border-radius: 30px;
+      margin-top: 70px;
+    }
+    header{
+        display: block;
+    }
+    .select-theme{
+        position: static;
+        margin: 7px;
+    }
+    #navbar {
+      
+      text-align:center;
+      display: inline;
+      padding: 15px 0;
+      
+    }
+    #navbar a{
+        margin:5px 0;
+    }
+    .social{
+        display: inline;
+    }
+}
+
+@media only screen and (max-width:500px){
+
+    main{
+        border: 9px solid white;
+        border-radius: 30px;
+        margin-top: 100px;
+      }
+      header{
+          display: block;
+          height: 100px;
+      }
+      .select-theme{
+          position: static;
+          margin: 7px;
+      }
+      .theme{
+        width: 80px;
+      }
+      #navbar {
+        
+        text-align:center;
+        display: inline;
+        padding: 15px 0;
+        
+      }
+      #navbar a{
+          margin:5px 0;
+      }
+      .social{
+          display: inline;
+      }
+      section{
+        scroll-margin-top: 100px;
+    }
+    .projects{
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+    .project-tile:focus span{
+        color: var(--background-color);
+        font-size: 25px;
+    }
+}
