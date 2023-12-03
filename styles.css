@@ -225,6 +225,7 @@ img{
 }
   
 .social{
+    
     display: flex;
     justify-content: space-evenly;
 }
@@ -232,9 +233,8 @@ img{
 .social a{
     text-decoration:none;
     color: var(--text-color);
-    font-size: 18px;
     margin-bottom:20px;
-    border: 1px solid black;
+    border: 1px solid var(--text-color);
     border-radius: 10px;
     padding:5px;
 }
@@ -278,9 +278,7 @@ footer{
     #navbar a{
         margin:5px 0;
     }
-    .social{
-        display: inline;
-    }
+   
 }
 
 @media only screen and (max-width:500px){
@@ -311,9 +309,7 @@ footer{
       #navbar a{
           margin:5px 0;
       }
-      .social{
-          display: inline;
-      }
+      
       section{
         scroll-margin-top: 100px;
     }
