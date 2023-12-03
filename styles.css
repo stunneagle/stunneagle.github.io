@@ -213,14 +213,14 @@ img{
 }
   
 .freecampproject a{
-    color: black;
+    color: var(--text-color);
     padding: 3px;
-    border: 1px solid black;
+    border: 1px solid var(--text-color);
     border-radius: 8px; 
 }
   
 .freecampproject a:hover{
-    color: var(--text-color);
+    color: var(--background-color);
     background-color: var(--nav-color);
     text-decoration: none;
 }
@@ -271,7 +271,7 @@ footer{
       
       text-align:center;
       display: inline;
-      padding: 15px 0;
+      
       
     }
     #navbar a{
@@ -303,7 +303,7 @@ footer{
         
         text-align:center;
         display: inline;
-        padding: 15px 0;
+        
         
       }
       #navbar a{
