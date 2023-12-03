@@ -50,14 +50,23 @@ section{
     background-image: var(--background-image);
     height: 100vh;
 }
-#typing-text{
-    background-color: var(--background-color);
-    white-space: pre-line;
-    text-align: left;
-    transition: background-color 0.5s ease;
+
+.typing-container {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--background-color); 
     opacity: 0.8;
 }
-#typing-text::after{
+#typing-text, #typing-text2{
+    white-space: pre-line;
+    text-align: left;
+    font-size: 30px;
+    font-weight: bold;
+    font-family:monospace;
+}
+#typing-text2::after{
     content: '|';
     animation: blink 0.7s infinite;
     display: inline-block;
