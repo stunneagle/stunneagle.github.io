@@ -14,14 +14,14 @@ function showAlert() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const textElement = document.getElementById('typing-text');
-    const textToType = "Hi there! I'm Sulaiman.\nWelcome to My Personal Website!";
-    const typingContainer = document.getElementById('typing-section');
+    const textElement = document.getElementById('typing-text2');
+    
+    const textToType = "Welcome to my Personal Website!";
+    
 
     function typeText() {
         textElement.textContent = textToType.substring(0, textElement.textContent.length + 1);
-        const bgColor = `rgb(${255 - textElement.textContent.length * 5}, ${255 - textElement.textContent.length * 5}, ${255 - textElement.textContent.length * 5})`;
-        typingContainer.style.backgroundColor = bgColor;
+        
     }
 
     setInterval(typeText, 200);
