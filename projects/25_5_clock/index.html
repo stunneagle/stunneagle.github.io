@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>25 + 5 Clock</title>
+        <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/b4fef0955c.js" crossorigin="anonymous"></script>
+
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="text-center mt-5">25 + 5 Clock</h1>
+            <div class="settings">
+                <div>
+                    <p>Break Length(min)</p>
+                    <div class="length-settings">
+                        <p>
+                            <button class="click" id="breakMinus" ><i class="fas fa-arrow-down" ></i></button>
+                            <span id="breakLength" class="text">05</span>
+                            <button class="click" id="breakPlus" ><i class="fas fa-arrow-up" ></i></button>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <p>Session Length(min)</p>
+                    <div class="length-settings">
+                        <p>
+                            <button class="click" id="sessionMinus" ><i class="fas fa-arrow-down" ></i></button>
+                            <span id="sessionLength" class="text">25</span>
+                            <button class="click" id="sessionPlus" ><i class="fas fa-arrow-up" ></i></button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="clock">
+                <p class="current-title">Title</p>
+                <span id="minute" class="time">00</span><span class="time">:</span><span id="seconds" class="time">00</span>
+            </div>
+            <div class="length-settings">
+                <button class="click" id="playButton" >
+                    <i class="fas fa-play"></i>
+                </button>
+                <button class="click" id="pauseButton" >
+                    <i class="fas fa-pause"></i>
+                </button>
+                <button class="click" id="refreshButton" >
+                    <i class="fas fa-refresh"></i>
+                </button>
+            </div>
+            <p class="author">Designed and Coded by <a href="#">Stunneagle</a></p>
+        </div>
+        
+
+<script src="script.js"></script>
+    </body>
+</html>

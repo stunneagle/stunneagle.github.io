@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+    <title>Random Quote Machine by stunneagle</title>
+    <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/b4fef0955c.js" crossorigin="anonymous"></script>
+
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./styles.css" />
+<script src="script.js"></script>
+  </head>
+    <body onload="quoteGenerator()">
+        
+            <div class="container" id="quote-box">
+              <div class="quote-container">
+                <p class="quote text-center" id="text"><i class="fas fa-quote-left"></i>The only person you are destined to become is the person you decide to be.</p>
+                <p class="author" id="author">- Ralph Waldo Emerson</p>
+                <a href="#" class="socials"><i class="fab fa-github"></i></a>
+                <a href="twitter.com/intent/tweet" class="socials" id="tweet-quote" target="_blank"><i class="fab fa-twitter"></i></a>
+                <button class="btn" onclick="quoteGenerator()" id="new-quote">New quote</button>
+              </div>
+                
+                <p class="coder">by <a href="codepen.io/stunneagle">stunneagle</a></p>
+              </div>
+       
+     
+    </body>
+ </html>

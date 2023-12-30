@@ -1,0 +1,74 @@
+:root{
+    --background-color: green;
+    --text-color: white;
+    --link-hover: darkgreen;
+}
+body{
+    background-color: var(--background-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container {
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+}
+.quote-container{
+    position: relative;
+    padding: 20px;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    border-radius: 5px;
+}
+.quote-container .quote{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 28px;
+}
+.quote-container .author{
+    text-align: right;
+}
+.quote-container .socials {
+    font-size: 25px;
+    color: var(--text-color);
+    margin-right: 2px;
+    background-color: var(--background-color);
+    padding: 5px;
+    border-radius: 5px;
+}
+.quote-container a:hover{
+    background-color: var(--link-hover);
+    color: var(--text-color);
+}
+
+.quote-container button{
+    float: right;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    border:none;
+}
+.quote-container button:hover{
+    background-color: var(--link-hover);
+    color: var(--text-color);
+}
+.coder {
+    text-align: center;
+    color: var(--text-color);
+    
+}
+.coder a{
+    color: var(--text-color);
+    font-style: italic;
+}
+.coder a:hover{
+    background-color: var(--link-hover);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+}
+@media only screen and (max-width: 700px) {
+    .container{
+        width: 100%;
+    }
+}
