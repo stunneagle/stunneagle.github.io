@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title> Javascript Calculator</title>
+        <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/b4fef0955c.js" crossorigin="anonymous"></script>
+
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./styles.css" />
+    </head>
+    <body>
+<div class="calculator">
+    <div class="container">
+        <div class="display">
+            <div class="answer" id="answer"></div>
+            <div class="input" id="input">0</div>
+        </div>
+        <div class="calculator-buttons">
+            <button class="double-width ac-button" onclick="clearDisplay()"> AC</button>
+            <button class="operators" onclick="performOperation('/')">/</button>
+            <button class="operators" onclick="performOperation('*')"> X</button>
+            <button class="numbers" onclick="appendToDisplay('7')">7</button>
+            <button class="numbers" onclick="appendToDisplay('8')">8</button>
+            <button class="numbers" onclick="appendToDisplay('9')">9</button>
+            <button class="operators" onclick="performOperation('-')">-</button>
+            <button class="numbers" onclick="appendToDisplay('4')">4</button>
+            <button class="numbers" onclick="appendToDisplay('5')">5</button>
+            <button class="numbers" onclick="appendToDisplay('6')">6</button>
+            <button class="operators" onclick="performOperation('+')">+</button>
+            <button class="numbers" onclick="appendToDisplay('1')"> 1</button>
+            <button class="numbers" onclick="appendToDisplay('2')">2</button>
+            <button class="numbers" onclick="appendToDisplay('3')">3</button>
+            <button class="double-height equals" onclick="calculateResult()">=</button>
+            <button class="double-width numbers" onclick="appendToDisplay('0')">0</button>
+            <button class="numbers" onclick="appendToDisplay('.')">.</button>
+            
+            
+        </div>
+        </div>
+       <p class="designer">
+        Designed and Coded by <a href="https://codepen.io/stunneagle/pen/dyaRdVp">Stunneagle</a>
+
+       </p>
+</div>
+<script src="script.js"></script>
+    </body>
+</html>

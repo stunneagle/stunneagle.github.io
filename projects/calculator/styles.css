@@ -1,0 +1,89 @@
+body{
+    background-color: rgb(198, 150, 102);
+}
+.calculator{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.container{
+    width: 400px;
+    height: 460px;
+    background-color: black;
+    padding: 5px;
+}
+.display{
+    width: 100%;
+    height: 95px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+.answer{
+    color:coral;
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 22px;
+    height: 30%;
+    
+    
+}
+.input{
+    color: antiquewhite;
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 27px;
+    margin-top: 10px;
+}
+
+.calculator-buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.5px;
+    
+   
+}
+.double-width{
+    grid-column: span 2;
+}
+.double-height{
+    grid-row: span 2;
+    height: 100%;
+}
+button{
+    height: 70px;
+    width: 100%;
+    border: none;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.ac-button{
+    background-color: firebrick;
+}
+.equals{
+    background-color: royalblue;
+}
+.numbers{
+    background-color: dimgray;
+}
+.operators{
+    background-color:rgb(132, 127, 127);
+}
+
+button:hover{
+    color:black;
+    border: 1px solid lightgrey;
+}
+.designer{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+a {
+    color: rgb(8, 5, 0);
+    font-weight: bold;
+}
+a:hover{
+    text-decoration: none;
+    background-color: azure;
+    border: 1px solid lightslategray;
+}

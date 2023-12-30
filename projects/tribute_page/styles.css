@@ -1,0 +1,38 @@
+main{
+    margin: 15px 5px ;
+    padding: 20px 10px;
+    background-color: rgb(185, 186, 186);
+    font-family: "Open Serif", Sans-serif;
+    width: 100%;
+    border-radius:4px;
+}
+h1,h2{
+text-align: center;
+margin: 20px 0;
+}
+.title-caption,figcaption{
+    text-align: center;
+    padding-top:10px;
+}
+figure {
+    background-color: white ;
+    padding: 20px 10px;
+    margin: 0;
+  
+}
+img{
+    
+    height: auto;
+    max-width:100%;
+    margin: 0 auto;
+    display:block;
+}
+ul{
+    width:80%;
+    
+    
+}
+ul > li{
+    margin: 20px auto;
+    
+}

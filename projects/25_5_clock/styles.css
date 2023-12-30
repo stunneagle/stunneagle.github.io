@@ -1,0 +1,99 @@
+body{
+    background-color:#bbeeff;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+    border: 1px solid #538cc6;
+}
+
+.settings{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+}
+.length-settings{
+    text-align: center;
+    
+}
+
+.click{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    
+}
+
+.clock{
+    border: 6px solid #538cc6;
+    border-radius: 35px;
+    width: 280px;
+    height: 150px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.current-title{
+    font-size: 25px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.time{
+    color: black;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 4.5em;
+    margin: 0;
+    padding: 0;
+}
+.author{
+    text-align: center;
+    margin-top: 10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.author a {
+    color: black;
+    font-weight: bold;
+}
+.author a:hover{
+    text-decoration: none;
+    color: gainsboro;
+    background-color: black;
+    border-radius: 10px;
+    padding: 3px;
+    
+}
+
+ button{
+    background-color:#bbeeff ;
+    border: none;
+    outline: none;
+   margin: 0 5px;
+    font-size: 25px;
+     font-weight: bold;
+     
+}
+
+button i{
+    text-align: center;
+    
+}
+
+i{
+    color: #47b8e0;
+}
+
+span[class="text"]{
+    font-size: 25px;
+    margin-left: 8px;
+    
+}

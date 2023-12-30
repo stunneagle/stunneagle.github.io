@@ -10,7 +10,7 @@ switcher.addEventListener('click', function() {
 
 
 function showAlert() {
-    alert('Work-in-progress! Check back later.');
+    alert('Update in Progress!. Please Check back later.');
 }
 
 document.addEventListener('DOMContentLoaded', () => {
