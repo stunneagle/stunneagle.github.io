@@ -1,6 +1,18 @@
 'use strict';
 
 document.addEventListener("DOMContentLoaded", function(){
+    
+    const loader = document.getElementById('loader');
+        loader.style.display = 'flex';
+        header();
+        setTimeout(function() {
+            loader.style.display = 'none';
+        }, 2000);
+   
+});
+
+
+function header(){
     fetch('header.html')
     .then(response => {
         if (!response.ok){
@@ -20,9 +32,8 @@ switcher.addEventListener('click', function() {
     }, 100);
 });
     })
-    .catch(error => console.error('Error fetching header'))
-})
-
+    .catch(error => console.error('Error fetching header'));
+}
 function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
     const sidebarLinks = document.querySelectorAll("#sidebar li");
