@@ -1,26 +1,30 @@
 :root {
-  --bg-color1: #f4f7f6;
+  /* --bg-color1: #f4f7f6;
   --text-color1: rgb(23, 43, 44);
   --nav-color1: #4aa99e;
-  --head-foot1: rgb(186, 203, 214);
-  --bg-color2: rgb(23, 43, 44);
-  --text-color2: rgb(186, 203, 214);
-  --nav-color2: #4aa99e;
-  --head-foot2: rgb(21, 79, 123);
+  --head-foot1: rgb(186, 203, 214); */
+  --bg-color1: white;
+  --text-color1: black;
+  --nav-color1: black;
+  --head-foot1: white;
+  --bg-color2: black;
+  --text-color2: white;
+  --nav-color2: white;
+  --head-foot2: black;
   --background-image1: url(personalproj_image/image2.webp);
   --background-image2: url(personalproj_image/image3.webp);
   --sidebar: #555252dc;
   --sidebar-text: #fff;
 }
 
-.light-theme {
+.dark-theme {
   --background-color: var(--bg-color1);
   --text-color: var(--text-color1);
   --nav-color: var(--nav-color1);
   --head-foot: var(--head-foot1);
   --background-image: var(--background-image1);
 }
-.dark-theme {
+.light-theme {
   --background-color: var(--bg-color2);
   --text-color: var(--text-color2);
   --nav-color: var(--nav-color2);
@@ -36,14 +40,13 @@ body {
 }
 
 main {
-  margin-top: 50px;
+  margin-top: 52px;
   background-color: var(--background-color);
-  padding: 10px;
   color: var(--text-color);
 }
 
 section {
-  scroll-margin-top: 50px;
+  scroll-margin-top: 52px;
 }
 
 #welcome-section {
@@ -51,6 +54,7 @@ section {
   background-size: cover;
   height: 100vh;
   overflow: hidden;
+  padding: 10px;
 }
 
 .typing-container {
@@ -75,6 +79,14 @@ section {
   display: inline-block;
 }
 
+#about{
+  background-color: var(--nav-color);
+  color: var(--head-foot);
+  padding: 10px;
+}
+#certifications{
+  text-align: center;
+}
 @keyframes blink {
   0%,
   100% {
@@ -290,8 +302,8 @@ h3 {
 .project-tile-display:hover span {
   height: 100%;
   font-size: 22px;
-  color: black;
-  background-color: color-mix(in srgb, var(--nav-color), transparent 10%);
+  color: var(--head-foot);
+  background-color: color-mix(in srgb, var(--nav-color), transparent 20%);
   transition: height 1s ease-in-out;
 }
 .tile-description {
@@ -315,14 +327,14 @@ h3 {
   margin: 10px;
 }
 .project-link a {
-  background-color: color-mix(in srgb, var(--bg-color1), transparent 30%);
-  color: color-mix(in srgb, black, transparent 10%);
+  background-color: var(--head-foot);
+  color: var(--nav-color);
   padding: 7px;
   border-radius: 5px;
 }
 .project-link a:hover {
-  color: color-mix(in srgb, var(--bg-color1), transparent 30%);
-  background-color: color-mix(in srgb, black, transparent 10%);
+  color: var(--head-foot);
+  background-color: var(--nav-color);
   padding: 7px;
   border-radius: 5px;
   text-decoration: none;
