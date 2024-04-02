@@ -260,10 +260,9 @@ nav svg:hover {
   margin-right: 5px;
 }
 .theme-button {
-  margin: 1px;
   width: 23px;
   height: 20px;
-  background-color: var(--background-color);
+  background-color: transparent;
   border-radius: 50px;
   border: 0;
   transition: transform 0.5s ease-in-out;

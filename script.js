@@ -27,13 +27,25 @@ function header(){
     .then(data => {
         document.getElementById('header').innerHTML = data;
         const switcher = document.querySelector('.theme');
+        const sunMoon = document.getElementById('sun-moon');
 const switcherButton = document.querySelector('.theme-button');
 switcher.addEventListener('click', function() {
     
     setTimeout(function() {
+        
         switcherButton.classList.toggle('switched');
         
     }, 10);
+    if (sunMoon.classList.contains('fa-moon')) {
+        sunMoon.classList.remove('fa-moon');
+        sunMoon.classList.add('fa-sun');
+      } else {
+        sunMoon.classList.remove('fa-sun');
+        sunMoon.classList.add('fa-moon');
+      }
+      
+    
+        
     loader();
     
     document.body.classList.toggle('light-theme');
