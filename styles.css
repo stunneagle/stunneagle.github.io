@@ -1,8 +1,4 @@
 :root {
-  /* --bg-color1: #f4f7f6;
-  --text-color1: rgb(23, 43, 44);
-  --nav-color1: #4aa99e;
-  --head-foot1: rgb(186, 203, 214); */
   --bg-color1: white;
   --text-color1: black;
   --nav-color1: black;
@@ -17,14 +13,14 @@
   --sidebar-text: #fff;
 }
 
-.dark-theme {
+.light-theme {
   --background-color: var(--bg-color1);
   --text-color: var(--text-color1);
   --nav-color: var(--nav-color1);
   --head-foot: var(--head-foot1);
   --background-image: var(--background-image1);
 }
-.light-theme {
+.dark-theme {
   --background-color: var(--bg-color2);
   --text-color: var(--text-color2);
   --nav-color: var(--nav-color2);
@@ -308,11 +304,9 @@ h3 {
   margin: 8px;
   text-align: center;
   text-decoration: none;
-  color: black;
-  border: 1px solid white;
+  border: 1px solid var(--nav-color);
   border-radius: 10px;
   font-weight: bold;
-  padding: 1px;
   overflow: hidden;
   position: relative;
 }
@@ -326,7 +320,6 @@ h3 {
   color: #fff; /* Text color */
   padding: 10px;
   box-sizing: border-box;
-  /* Add a smooth transition for visibility */
   z-index: 1;
   transition: background-color 0.5s ease-in-out;
   height: 20%;
