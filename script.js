@@ -2,14 +2,18 @@
 
 document.addEventListener("DOMContentLoaded", function(){
     
-    const loader = document.getElementById('loader');
-        loader.style.display = 'flex';
-        header();
-        setTimeout(function() {
-            loader.style.display = 'none';
-        }, 2000);
+    header();
+    loader();
    
 });
+
+function loader() {
+    const loader = document.getElementById('loader');
+        loader.style.display = 'flex';
+        setTimeout(function() {
+            loader.style.display = 'none';
+        }, 1200);
+}
 
 
 function header(){
@@ -25,11 +29,15 @@ function header(){
         const switcher = document.querySelector('.theme');
 const switcherButton = document.querySelector('.theme-button');
 switcher.addEventListener('click', function() {
-    document.body.classList.toggle('light-theme');
-    document.body.classList.toggle('dark-theme');
+    
     setTimeout(function() {
         switcherButton.classList.toggle('switched');
-    }, 100);
+        
+    }, 10);
+    loader();
+    
+    document.body.classList.toggle('light-theme');
+    document.body.classList.toggle('dark-theme');
 });
     })
     .catch(error => console.error('Error fetching header'));
