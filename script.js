@@ -12,7 +12,7 @@ function loader() {
         loader.style.display = 'flex';
         setTimeout(function() {
             loader.style.display = 'none';
-        }, 1200);
+        }, 1500);
 }
 
 
