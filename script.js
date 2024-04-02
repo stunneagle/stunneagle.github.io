@@ -1,7 +1,6 @@
 'use strict';
 
 document.addEventListener("DOMContentLoaded", function(){
-    
     header();
     loader();
    
@@ -12,6 +11,7 @@ function loader() {
         loader.style.display = 'flex';
         setTimeout(function() {
             loader.style.display = 'none';
+            texType();
         }, 1500);
 }
 
@@ -112,29 +112,6 @@ function handleScroll() {
   window.addEventListener('scroll', handleScroll);
 
   
-    // Get the current page URL
-    var currentPage = window.location.href;
-
-    // Update the active class based on the current page
-    document.addEventListener("DOMContentLoaded", function() {
-        var navLinks = document.querySelectorAll('header nav ul li a');
-        navLinks.forEach(function(link) {
-            // Check if the current page URL matches the link's href attribute
-            if (link.href === currentPage) {
-                // Add active class to the link
-                link.classList.add('active');
-                
-                // Add active class to the parent menu item (if it has one)
-                var parentMenu = link.closest('.menu-opt');
-                if (parentMenu) {
-                    parentMenu.querySelector('a').classList.add('active');
-                }
-
-                
-            }
-        });
-        
-    });
 
 
 
@@ -142,7 +119,7 @@ function showAlert() {
     alert('Update in Progress!. Please Check back later.');
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function texType()  {
     const textElement = document.getElementById('typing-text2');
     
     const textToType = "Welcome to my Personal Website!";
@@ -154,5 +131,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     setInterval(typeText, 200);
-});
+}
 

@@ -68,7 +68,6 @@ section {
   font-size: 30px;
   font-weight: bold;
   font-family: monospace;
-  animation-delay: 2s;
 }
 #typing-text2::after {
   content: "|";
