@@ -9,8 +9,10 @@
   --head-foot2: black;
   --background-image1: url(personalproj_image/image2.webp);
   --background-image2: url(personalproj_image/image3.webp);
-  --sidebar: #555252dc;
-  --sidebar-text: #fff;
+  --sidebar1: #555252dc;
+  --sidebar-text1: #fff;
+  --sidebar2: #fff;
+  --sidebar-text2: #555252dc;
 }
 
 .light-theme {
@@ -19,6 +21,8 @@
   --nav-color: var(--nav-color1);
   --head-foot: var(--head-foot1);
   --background-image: var(--background-image1);
+  --sidebar: var(--sidebar1);
+  --sidebar-text: var(--sidebar-text1);
 }
 .dark-theme {
   --background-color: var(--bg-color2);
@@ -26,12 +30,14 @@
   --nav-color: var(--nav-color2);
   --head-foot: var(--head-foot2);
   --background-image: var(--background-image2);
+  --sidebar: var(--sidebar2);
+  --sidebar-text: var(--sidebar-text2);;
 }
 html,
 body {
   margin: 0;
   padding: 0;
-  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
   scroll-behavior: smooth;
 }
 
@@ -220,10 +226,6 @@ nav svg:hover {
 .show {
     transform: translateX(0); 
   }
-.hide {
-    transform: translateX(250px); 
-    animation: slideIn 2s ease-in backwards;
-  }
 .slide-in {
     animation: slideIn 3s ease-out backwards;
   }
@@ -314,8 +316,8 @@ h3 {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-  color: #fff; /* Text color */
+  background-color: rgba(0, 0, 0, 0.5); 
+  color: #fff;
   padding: 10px;
   box-sizing: border-box;
   z-index: 1;

@@ -58,22 +58,22 @@ function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
     const sidebarLinks = document.querySelectorAll("#sidebar li");
     
-    // Toggle the 'show' class for the sidebar
+   
     sidebar.classList.toggle("show");
-    //sidebar.classList.toggle("hide");
+   
     
-    // Add the 'slideIn' class to each list item in the sidebar
+   
     sidebarLinks.forEach((item, index) => {
-        // Delay the addition of 'slideIn' class to create a sequential animation
+       
         setTimeout(() => {
            
             item.classList.toggle("slide-and-rotate");
-        }, index * 400); // Adjust the delay time as needed
+        }, index * 400); 
     });
 }
 
 
-// Function to check if an element is in the viewport
+
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     const windowHeight = window.innerHeight || document.documentElement.clientHeight;
