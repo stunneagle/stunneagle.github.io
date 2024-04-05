@@ -3,6 +3,31 @@
 document.addEventListener("DOMContentLoaded", function(){
     header();
     loader();
+   const filterBtns = document.querySelectorAll('.filter-btn');
+   const projectTiles = document.querySelectorAll('.project-tile');
+
+   function filterProjects(category){
+    projectTiles.forEach(tile => {
+        if (category === 'all') {
+            tile.style.display = 'block';
+        } else if (tile.getAttribute('data-category') === category) {
+            tile.style.display = 'block';
+        } else {
+            tile.style.display = 'none';
+     
+   } 
+});
+   }
+
+   filterBtns.forEach(btn => {
+       btn.addEventListener('click', function() {
+        filterBtns.forEach(btn => btn.classList.remove('active'));
+        this.classList.add("active");
+        const category = this.getAttribute('data-filter');
+           filterProjects(category);
+       });
+   });
+   filterProjects('all');
    
 });
 
