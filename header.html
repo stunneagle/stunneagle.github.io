@@ -1,51 +1,74 @@
+<header class="fixed top-0 right-0 w-full z-50">
+  <nav class="flex items-center justify-between shadow opacity-90 px-4 py-1">
+    <div class="flex items-center">
+      <div class="select-theme">
+        <div class="theme">
+          <button title="change theme" class="theme-button">
+            <i class="fas fa-moon" id="sun-moon"></i>
+          </button>
+        </div>
+        <span>Change Theme</span>
+      </div>
+      <button
+        title="sidebar menu"
+        class="ml-4 md:hidden focus:outline-none menu-button"
+        onclick="toggleMenu()"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          ></path>
+        </svg>
+      </button>
+    </div>
+    <ul class="hidden md:flex flex-wrap items-center space-x-4 m-0">
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#certifications" class="nav-link">Certifications</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+  <nav
+    id="sidebar"
+    class="sidebar flex md:hidden fixed top-0 right-0 h-screen w-63 z-50 backdrop-filter backdrop-blur-lg"
+  >
+    <ul class="flex flex-col items-start justify-start h-full w-full mt-16">
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#certifications" class="nav-link">Certifications</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
 
-<header class="fixed top-0 right-0 w-full z-50 ">
-    <nav class="flex items-center justify-between shadow opacity-90 px-4 py-1">
-        <div class="flex items-center">
-            <div class="select-theme">  
-                <div class="theme">   
-                    <button class="theme-button" ><i class="fas fa-moon" id="sun-moon"></i></button>   
-                </div>
-                <span>Change Theme</span>
-            </div>
-            <button class="ml-4 md:hidden focus:outline-none menu-button" onclick="toggleMenu()">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
-        </div>
-        <ul class="hidden md:flex flex-wrap items-center space-x-4 m-0">
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#certifications" class="nav-link">Certifications</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-    </nav>
-    <nav id="sidebar" class="sidebar flex md:hidden fixed top-0 right-0 h-screen w-63 z-50 backdrop-filter backdrop-blur-lg">
-        <ul class="flex flex-col items-start justify-start h-full w-full mt-16">
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#certifications" class="nav-link">Certifications</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-            
-        </ul>
-            
-        <div class="max-h-10">
-            <button class="focus:outline-none mt-2" onclick="toggleMenu()">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400 hover:text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
-        </div>
-           
-    </nav>
-    
+    <div class="max-h-10">
+      <button
+        title="close sidebar"
+        class="focus:outline-none mt-2"
+        onclick="toggleMenu()"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 text-gray-400 hover:text-gray-600"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+    </div>
+  </nav>
 </header>
-
-
-
-
-
-
