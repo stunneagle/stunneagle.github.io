@@ -115,7 +115,7 @@ function showAlert() {
 
 function texType()  {
     const textElement = document.getElementById('typing-text2');
-    const textToType = "Welcome to my Personal Website!";
+    const textToType = "Welcome to my Personal Website!💻";
     
     function typeText() {
         textElement.textContent = textToType.substring(0, textElement.textContent.length + 1);

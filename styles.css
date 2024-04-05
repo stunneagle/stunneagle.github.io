@@ -60,6 +60,8 @@ section {
 }
 
 .typing-container {
+  margin-top: 1.5rem;
+  margin-left: 1rem;
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
@@ -71,9 +73,11 @@ section {
 #typing-text2 {
   white-space: pre-line;
   text-align: left;
-  font-size: 30px;
   font-weight: bold;
   font-family: monospace;
+}
+#typing-text2{
+  font-size: 3rem;
 }
 #typing-text2::after {
   content: "|";
@@ -292,7 +296,7 @@ h3 {
 .welcome-text {
   text-indent: 50px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 18px;
+  font-size: 1.2rem;
 }
 
 .projects {
@@ -365,6 +369,37 @@ h3 {
   border-radius: 5px;
   text-decoration: none;
 }
+.about-certifications-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about-certifications-container section {
+    flex: 1 0 45%; 
+    margin: 10px;
+}
+
+.technologies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.tech-item {
+    text-align: center;
+}
+
+.tech-item img {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.tech-item img:hover{
+  transform: scale(1.1)rotate(10deg);
+}
 
 img {
   display: block;
@@ -427,6 +462,9 @@ footer {
     border: 5px solid white;
     border-radius: 30px;
   }
+  .about-certifications-container section {
+        flex: 1 0 100%; 
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -450,6 +488,8 @@ footer {
     transition: font-size 0.3s ease-in-out;
     height: 100%;
   }
+
+  
   .social-text {
     display: none;
   }
