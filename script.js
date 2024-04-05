@@ -43,9 +43,7 @@ switcher.addEventListener('click', function() {
         sunMoon.classList.remove('fa-sun');
         sunMoon.classList.add('fa-moon');
       }
-      
-    
-        
+       
     loader();
     
     document.body.classList.toggle('light-theme');
@@ -60,8 +58,6 @@ function toggleMenu() {
     
    
     sidebar.classList.toggle("show");
-   
-    
    
     sidebarLinks.forEach((item, index) => {
        
@@ -111,8 +107,6 @@ function handleScroll() {
   // Add event listener to handle scroll
   window.addEventListener('scroll', handleScroll);
 
-  
-
 
 
 function showAlert() {
@@ -121,10 +115,8 @@ function showAlert() {
 
 function texType()  {
     const textElement = document.getElementById('typing-text2');
-    
     const textToType = "Welcome to my Personal Website!";
     
-
     function typeText() {
         textElement.textContent = textToType.substring(0, textElement.textContent.length + 1);
         
