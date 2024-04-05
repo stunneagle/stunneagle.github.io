@@ -9,7 +9,6 @@ Welcome to my portfolio! This repository contains the source code for my persona
 - [Projects](#projects)
 - [Technologies Used](#technologies-used)
 - [Contact Information](#contact-information)
-- [License](#license)
 
 ## About Me
 
