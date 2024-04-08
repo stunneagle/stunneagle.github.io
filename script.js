@@ -1,9 +1,14 @@
 "use strict";
+document.cookie = "cookieName=cookieValue; SameSite=Strict";
+
 
 document.addEventListener("DOMContentLoaded", function () {
   header();
   loader();
   setTimeout(texType, 1500);
+
+  
+
   const filterBtns = document.querySelectorAll(".filter-btn");
   const projectTiles = document.querySelectorAll(".project-tile");
 
@@ -30,6 +35,62 @@ document.addEventListener("DOMContentLoaded", function () {
   filterProjects("all");
 });
 
+function applyTheme() {
+  const cookieValues = document.cookie.split("; ").reduce((acc, cookie) => {
+    const [key, value] = cookie.split("=");
+    acc[key] = value;
+    return acc;
+  }, {});
+
+  const theme = cookieValues.theme || "light-theme";
+
+  // Apply the theme to the body class
+  document.body.className = theme;
+
+  // Apply the switched class and the sun-moon icon class if they exist in the cookie
+  const switcherButton = document.getElementById("theme-button");
+  const sunMoon = document.getElementById("sun-moon");
+
+  if (cookieValues.switched === "switched") {
+    switcherButton.classList.add("switched");
+  }
+  if (cookieValues.sunMoon === "fa-moon") {
+    sunMoon.classList.remove("fa-sun");
+    sunMoon.classList.add("fa-moon");
+  } else if (cookieValues.sunMoon === "fa-sun") {
+    sunMoon.classList.remove("fa-moon");
+    sunMoon.classList.add("fa-sun");
+  }
+}
+
+function switchTheme(theme) {
+  const newTheme = theme === "light-theme" ? "dark-theme" : "light-theme";
+  document.body.className = newTheme;
+  const sunMoon = document.getElementById("sun-moon");
+  const switcherButton = document.getElementById("theme-button");
+  const switchedClass = switcherButton.classList.contains("switched")
+    ? ""
+    : "switched";
+  const sunMoonClass = sunMoon.classList.contains("fa-moon")
+    ? "fa-sun"
+    : "fa-moon";
+  // Set individual cookie attributes
+  document.cookie = `theme=${newTheme}; path=/; max-age=${60 * 60 * 24 * 365}`;
+  document.cookie = `switched=${switchedClass}; path=/; max-age=${
+    60 * 60 * 24 * 365
+  }`;
+  document.cookie = `sunMoon=${sunMoonClass}; path=/; max-age=${
+    60 * 60 * 24 * 365
+  }`;
+
+  setTimeout(function () {
+    switcherButton.classList.toggle("switched");
+    sunMoon.classList.toggle("fa-moon");
+    sunMoon.classList.toggle("fa-sun");
+  }, 10);
+
+  loader();
+}
 function loader() {
   const loader = document.getElementById("loader");
   loader.style.display = "flex";
@@ -48,29 +109,25 @@ function header() {
     })
     .then((data) => {
       document.getElementById("header").innerHTML = data;
-      const switcher = document.querySelector(".theme");
-      const sunMoon = document.getElementById("sun-moon");
-      const switcherButton = document.querySelector(".theme-button");
-      switcher.addEventListener("click", function () {
-        setTimeout(function () {
-          switcherButton.classList.toggle("switched");
-        }, 10);
-        if (sunMoon.classList.contains("fa-moon")) {
-          sunMoon.classList.remove("fa-moon");
-          sunMoon.classList.add("fa-sun");
-        } else {
-          sunMoon.classList.remove("fa-sun");
-          sunMoon.classList.add("fa-moon");
-        }
+      const switcher = document.getElementById("theme");
 
-        loader();
-
-        document.body.classList.toggle("light-theme");
-        document.body.classList.toggle("dark-theme");
+      applyTheme();
+      // Get the theme from the cookie
+      switcher.addEventListener("click", () => {
+        const newThemeCookie = document.cookie
+          .split("; ")
+          .find((row) => row.startsWith("theme="));
+        const oldTheme = newThemeCookie
+          ? newThemeCookie.split("=")[1]
+          : "light-theme";
+        switchTheme(oldTheme);
       });
     })
     .catch((error) => console.error("Error fetching header"));
 }
+
+
+
 function toggleMenu() {
   const sidebar = document.getElementById("sidebar");
   const sidebarLinks = document.querySelectorAll("#sidebar li");
@@ -134,8 +191,8 @@ function texType() {
   let textIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
-  let typingSpeed = 50;
-  let deletingSpeed = 20;
+  let typingSpeed = 80;
+  let deletingSpeed = 5;
 
   function typeText() {
     const currentText = texts[textIndex];
@@ -154,7 +211,7 @@ function texType() {
       } else {
         setTimeout(() => {
           isDeleting = true;
-        }, 1500);
+        }, 3000);
       }
     }
 
@@ -167,7 +224,7 @@ function texType() {
 }
 
 function initMap() {
-  const myLatLng = { lat: 52.95428, lng: -1.1581 }; 
+  const myLatLng = { lat: 52.95428, lng: -1.1581 };
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 15,
     center: myLatLng,
@@ -179,22 +236,22 @@ function initMap() {
   });
 }
 function onSubmit(token) {
-const name = document.getElementById("name").value;
-const email = document.getElementById("email").value;
-const message = document.getElementById("message").value;
-let submitMsg = document.getElementById("submitMsg");
-if (name == "" || email == "" || message == "") {
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+  let submitMsg = document.getElementById("submitMsg");
+  if (name == "" || email == "" || message == "") {
     submitMsg.style.color = "red";
-  submitMsg.innerText = "Please fill in all the fields";
-  return;
-} else if(email.indexOf("@") == -1 || email.indexOf(".") == -1) {
+    submitMsg.innerText = "Please fill in all the fields";
+    return;
+  } else if (email.indexOf("@") == -1 || email.indexOf(".") == -1) {
     submitMsg.style.color = "red";
-  submitMsg.innerText = "Please enter a valid email address";
-  return;
-}
- else {
+    submitMsg.innerText = "Please enter a valid email address";
+    return;
+  } else {
     submitMsg.style.color = "green";
-  submitMsg.innerText ="Thank you for contacting me! I will get back to you soon.";
-}
+    submitMsg.innerText =
+      "Thank you for contacting me! I will get back to you soon.";
+  }
   document.getElementById("contact-form").submit();
 }
