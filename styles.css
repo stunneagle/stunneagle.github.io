@@ -61,7 +61,7 @@ section {
 
 .typing-container {
   margin-top: 1.5rem;
-  margin-left: 1rem;
+  margin-left: 0.6rem;
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
@@ -520,6 +520,9 @@ footer {
 
 @media only screen and (max-width: 1000px) {
 
+  body{
+    padding: 0 3px;
+  }
   main {
     border: 5px solid white;
     border-radius: 30px;
