@@ -3,6 +3,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   header();
   loader();
+  initMap();
+  setTimeout(texType, 1500);
   const filterBtns = document.querySelectorAll(".filter-btn");
   const projectTiles = document.querySelectorAll(".project-tile");
 
@@ -34,7 +36,6 @@ function loader() {
   loader.style.display = "flex";
   setTimeout(function () {
     loader.style.display = "none";
-    texType();
   }, 1500);
 }
 
@@ -128,7 +129,7 @@ function showAlert() {
 function texType() {
   const textElement = document.getElementById("typing-text2");
   const texts = [
-    "I'm Sulaiman, a full-stack developer!💻",
+    "I'm Sulaiman, a full stack developer!💻",
     "Let's create something amazing together! 🚀",
   ];
   let textIndex = 0;
@@ -166,3 +167,15 @@ function texType() {
   setInterval(typeText, isDeleting ? deletingSpeed : typingSpeed);
 }
 
+function initMap() {
+  const myLatLng = { lat: 52.95428, lng: -1.1581 }; 
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 15,
+    center: myLatLng,
+  });
+  new google.maps.Marker({
+    position: myLatLng,
+    map,
+    title: "Nottingham, UK",
+  });
+}

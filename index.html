@@ -8,7 +8,7 @@
       content="Experienced web developer based in Nottingham, UK. Contact me for web development projects."
     />
     <title>Sulaiman Adejumo - Web Developer | Nottingham, UK</title>
-    <link rel="stylesheet" href="styles.css?v=1.4" />
+    <link rel="stylesheet" href="styles.css?v=1.5" />
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
@@ -492,15 +492,26 @@
       </section>
       <hr />
       <section id="contact">
-        <h2>Let's work together...</h2>
+        <h2>Contact Me</h2>
+
+        <div class="get-in-touch">
+          <div id="map"></div>
+          <div class="inner-get">
+            <form method="post">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message"></textarea><br />
+              <input type="submit" value="Submit" onclick="showAlert()">
+            </form>
+          </div>
+        </div><br/>
         <p class="title-caption">
-          you can contact me through any of my socials below
+          you can also contact me through any of my socials below
         </p>
         <div class="social">
-          <a href="mailto:sulaimanadejumo01@gmail.com" target="_blank"
-            ><i class="fa fa-envelope"></i
-            ><span class="social-text"> Email</span></a
-          >
           <a href="https://codepen.io/stunneagle" target="_blank"
             ><i class="fa fa-codepen"></i
             ><span class="social-text"> CodePen</span></a
@@ -569,7 +580,7 @@
         ]
       }
     </script>
-
-    <script src="script.js?v=1.4"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcwH-CXVF_M2rDNJs9I_PU39KsJvNfw1Q&callback=initMap"></script>
+    <script src="script.js?v=1.5"></script>
   </body>
 </html>

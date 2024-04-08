@@ -309,14 +309,15 @@ h3 {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    border: 1px solid var(--text-color);
 }
 
-.filter-btn:hover,
-.filter-btn.active {
+.filter-btn.active,.filter-btn:hover {
   
     background-color: var(--text-color); 
     color: var(--background-color);
     outline: none;
+    
 }
 
 .projects {
@@ -468,6 +469,46 @@ img {
   text-decoration: none;
 }
 
+.get-in-touch{
+  display: flex;
+  justify-content: space-evenly;
+}
+#map {
+  height: 400px;
+  width: 45%;
+ border: 1px solid #ccc;
+ border-radius: 5px;
+}
+.inner-get{
+  width: 45%;
+}
+
+form {
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+}
+
+input[type="text"], input[type="email"], textarea {
+ padding: 5px;
+ border: 1px solid var(--text-color);
+ border-radius: 5px;
+ color: black;
+}
+
+input[type="submit"] {
+ padding: 10px;
+ background-color: #007bff;
+ color: white;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+}
+
+input[type="submit"]:hover {
+ background-color: #0056b3;
+}
+
 footer {
   background-color: var(--nav-color);
   color: var(--background-color);
@@ -486,6 +527,16 @@ footer {
   .about-certifications-container section {
         flex: 1 0 100%; 
     }
+  .get-in-touch{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .inner-get{
+    width: 100%;
+  }
+  #map{
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 600px) {
