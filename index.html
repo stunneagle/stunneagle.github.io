@@ -497,14 +497,15 @@
         <div class="get-in-touch">
           <div id="map"></div>
           <div class="inner-get">
-            <form method="post">
+            <form action="https://formspree.io/f/mvoevkqg" method="post">
               <label for="name">Name:</label>
               <input type="text" id="name" name="name">
               <label for="email">Email:</label>
               <input type="email" id="email" name="email">
               <label for="message">Message:</label>
               <textarea id="message" name="message"></textarea><br />
-              <input type="submit" value="Submit" onclick="showAlert()">
+              <div class="g-recaptcha" data-sitekey="6LfBTrQpAAAAAOSXctwsOR6RoKMiaHaXkDh88fv6"></div>
+              <input type="submit" value="Submit" >
             </form>
           </div>
         </div><br/>
@@ -581,6 +582,7 @@
       }
     </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcwH-CXVF_M2rDNJs9I_PU39KsJvNfw1Q&callback=initMap"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="script.js?v=1.5"></script>
   </body>
 </html>
