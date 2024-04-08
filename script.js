@@ -1,5 +1,5 @@
 "use strict";
-document.cookie = "cookieName=cookieValue; SameSite=Strict";
+// document.cookie = "cookieName=cookieValue; SameSite=Strict";
 
 
 document.addEventListener("DOMContentLoaded", function () {
