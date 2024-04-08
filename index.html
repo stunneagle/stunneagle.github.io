@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Experienced web developer based in Nottingham, UK. Contact me for web development projects."
+      content="Experienced web developer based in Nottingham, UK. Contact me for web development projects. (stunneagle - Sulaiman Adejumo)"
     />
     <title>Sulaiman Adejumo - Web Developer | Nottingham, UK</title>
     <link rel="stylesheet" href="styles.css?v=1.5" />
@@ -33,6 +33,9 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
+  <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfBTrQpAAAAAOSXctwsOR6RoKMiaHaXkDh88fv6"></script>
+
   </head>
   <body class="light-theme font-sans antialiased">
     <div class="loader-container"></div>
@@ -497,15 +500,21 @@
         <div class="get-in-touch">
           <div id="map"></div>
           <div class="inner-get">
-            <form action="https://formspree.io/f/mvoevkqg" method="post">
+            <form action="https://formspree.io/f/mvoevkqg" method="post" id="contact-form">
               <label for="name">Name:</label>
-              <input type="text" id="name" name="name">
+              <input type="text" id="name" name="name" required>
               <label for="email">Email:</label>
-              <input type="email" id="email" name="email">
+              <input type="email" id="email" name="email" required>
               <label for="message">Message:</label>
-              <textarea id="message" name="message"></textarea><br />
-              <div class="g-recaptcha" data-sitekey="6LfBTrQpAAAAAOSXctwsOR6RoKMiaHaXkDh88fv6"></div>
-              <input type="submit" value="Submit" >
+              <textarea id="message" name="message" required></textarea>
+              <div id="submitMsg" ></div>
+              <button class="g-recaptcha contact-btn"
+              
+    data-sitekey="6LfBTrQpAAAAAOSXctwsOR6RoKMiaHaXkDh88fv6"
+    data-callback='onSubmit'
+    data-action='submit'>
+  Submit
+</button>
             </form>
           </div>
         </div><br/>
@@ -582,7 +591,7 @@
       }
     </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcwH-CXVF_M2rDNJs9I_PU39KsJvNfw1Q&callback=initMap"></script>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <script src="script.js?v=1.5"></script>
   </body>
 </html>

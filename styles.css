@@ -496,7 +496,7 @@ input[type="text"], input[type="email"], textarea {
  color: black;
 }
 
-input[type="submit"] {
+.contact-btn {
  padding: 10px;
  background-color: #007bff;
  color: white;
@@ -505,7 +505,7 @@ input[type="submit"] {
  cursor: pointer;
 }
 
-input[type="submit"]:hover {
+.contact-btn:hover {
  background-color: #0056b3;
 }
 

@@ -3,7 +3,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   header();
   loader();
-  initMap();
   setTimeout(texType, 1500);
   const filterBtns = document.querySelectorAll(".filter-btn");
   const projectTiles = document.querySelectorAll(".project-tile");
@@ -178,4 +177,24 @@ function initMap() {
     map,
     title: "Nottingham, UK",
   });
+}
+function onSubmit(token) {
+const name = document.getElementById("name").value;
+const email = document.getElementById("email").value;
+const message = document.getElementById("message").value;
+let submitMsg = document.getElementById("submitMsg");
+if (name == "" || email == "" || message == "") {
+    submitMsg.style.color = "red";
+  submitMsg.innerText = "Please fill in all the fields";
+  return;
+} else if(email.indexOf("@") == -1 || email.indexOf(".") == -1) {
+    submitMsg.style.color = "red";
+  submitMsg.innerText = "Please enter a valid email address";
+  return;
+}
+ else {
+    submitMsg.style.color = "green";
+  submitMsg.innerText ="Thank you for contacting me! I will get back to you soon.";
+}
+  document.getElementById("contact-form").submit();
 }
